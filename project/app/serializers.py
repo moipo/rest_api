@@ -10,7 +10,7 @@ class IngredientSerializer(serializers.ModelSerializer):
 
 class IngredientItemSerializer(serializers.ModelSerializer):
     amount_2x = serializers.SerializerMethodField()
-    ingredient = IngredientSerializer( many = False, read_only = True)
+    ingredient = IngredientSerializer( many = False)
 
     class Meta:
         model = IngredientItem
